@@ -145,10 +145,17 @@ NSString * const ID = @"cycleCell";
     mainView.scrollsToTop = NO;
     [self addSubview:mainView];
     _mainView = mainView;
+    _mainView.scrollsToTop = _scrollsToTop;
 }
 
 
 #pragma mark - properties
+
+- (void)setScrollsToTop:(BOOL)scrollsToTop {
+    if (_mainView) {
+        _mainView.scrollsToTop = scrollsToTop;
+    }
+}
 
 - (void)setPlaceholderImage:(UIImage *)placeholderImage
 {

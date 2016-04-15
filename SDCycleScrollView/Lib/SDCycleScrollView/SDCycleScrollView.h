@@ -62,6 +62,7 @@ typedef enum {
 
 @interface SDCycleScrollView : UIView
 
+@property (nonatomic, assign) BOOL scrollsToTop;
 
 /** 初始轮播图（推荐使用） */
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<SDCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
